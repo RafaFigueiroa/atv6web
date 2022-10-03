@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: gray;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+/* ===== HEADER ===== */
+header{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+header h1{
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+header h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+/* ===== MAIN ===== */
+.grid-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+/* ===== COLUMN 1 ===== */
+.column1{
+    text-align: center;
+}
+
+img{
+    width: 25rem;
+}
+
+.column1 ul{
+    margin-top: 2rem;
+    padding: 0;
+}
+
+.column1 ul li{
+    margin-bottom: 1.3rem;
+    list-style-type: none;
+}
+
+button{
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    background-color: transparent;
+    width: 300px;
+
+    position: relative;
+}
+
+button::before{
+    content: '';
+    width: 0;
+    height: 102%;
+    border-radius: 0.3rem;
+    
+    top: -1px;
+    left: -1px;
+    z-index: -1;
+    position: absolute;
+    transition: all 0.5s ease;
+}
+
+button:hover::before{
+    cursor: pointer;
+    width: 101%;
+}
+
+/* ===== BUTTON 1 ===== */
+#btn1{
+    border: 2px solid #ff00ae;
+}
+
+#btn1::before{
+    background: #ff00ae;
+}
+
+#btn1:hover::before{
+    box-shadow: 0px 0px 10px 5px #556abe;
+}
+
+/* ===== BUTTON 2 ===== */
+#btn2{
+    border: 2px solid #556abe;
+}
+
+#btn2::before{
+    background: #556abe;
+}
+
+#btn2:hover::before{
+    box-shadow: 0px 0px 10px 5px #ff00ae;
+}
+
+/* ===== COLUMN 2 =====*/
+.column2 h2{
+    font-size: 1.7rem;
+    font-weight: 550;
+    margin-bottom: 1rem;
+}
+
+.column2 ol{
+    margin-bottom: 1.5rem;
+}
+
+.column2 ul, ol{
+    margin-left: 2.5rem;
+}
+
+.column2 li{
+    font-size: 1.2rem;
+}
